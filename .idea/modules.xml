@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ScoutingMachine.iml" filepath="$PROJECT_DIR$/ScoutingMachine.iml" />
       <module fileurl="file://$PROJECT_DIR$/ScoutingMachine/ScoutingMachine-Android.iml" filepath="$PROJECT_DIR$/ScoutingMachine/ScoutingMachine-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScoutingMachine/ScoutingMachine-ScoutingMachine.iml" filepath="$PROJECT_DIR$/ScoutingMachine/ScoutingMachine-ScoutingMachine.iml" />
     </modules>
   </component>
 </project>
