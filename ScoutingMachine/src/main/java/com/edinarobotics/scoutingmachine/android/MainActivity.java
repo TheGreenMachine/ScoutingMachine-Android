@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         isCompetitionActive = prefs.getBoolean(COMPETITION_ACTIVE_PREF, false);
-        toastCompetitionState();
+        toast(COMPETITION_ACTIVE_PREF+": "+Boolean.toString(isCompetitionActive));
 
         Button resetButton = (Button) findViewById(R.id.button_reset);
         resetButton.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +32,7 @@ public class MainActivity extends ActionBarActivity {
                 isCompetitionActive = false;
                 prefs.edit().putBoolean(COMPETITION_ACTIVE_PREF, isCompetitionActive).commit();
                 supportInvalidateOptionsMenu();
-                toastCompetitionState();
+                toast(COMPETITION_ACTIVE_PREF+": "+Boolean.toString(isCompetitionActive));
             }
         });
     }
@@ -65,7 +65,7 @@ public class MainActivity extends ActionBarActivity {
                 isCompetitionActive = true;
                 prefs.edit().putBoolean(COMPETITION_ACTIVE_PREF, isCompetitionActive).commit();
                 supportInvalidateOptionsMenu();
-                toastCompetitionState();
+                toast(COMPETITION_ACTIVE_PREF+": "+Boolean.toString(isCompetitionActive));
                 return true;
             case R.id.action_settings:
                 return true;
@@ -73,8 +73,8 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void toastCompetitionState() {
-        Toast.makeText(this, COMPETITION_ACTIVE_PREF+": "+Boolean.toString(isCompetitionActive), Toast.LENGTH_SHORT).show();
-    }
+    private void toast(String text) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+     }
 
 }
